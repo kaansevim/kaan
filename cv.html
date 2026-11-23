@@ -3,68 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>CV · Kaan Sevim</title>
 </head>
 <body>
+<canvas class="bg-field" aria-hidden="true"></canvas>
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html">Kaan Sevim</a>
+    <a class="logo" href="index.html">Kaan<span class="dots"><i></i><i></i></span></a>
     <nav>
       <a href="index.html">Hakkımda</a>
       <a href="dersler.html">Dersler</a>
       <a href="cv.html" class="active">CV</a>
+      <button class="theme-btn" aria-label="Temayı değiştir">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
     </nav>
   </div>
 </header>
 <main class="wrap">
-  <div class="eyebrow">Özgeçmiş</div>
-  <h1>CV</h1>
-  <p class="lead">Akademik unvanlar, eğitim, editörlük ve projeler.</p>
-  <div class="links">
-    <a class="btn doldur" href="#">ORCID</a>
-    <a class="btn doldur" href="#">Google Scholar</a>
-    <a class="btn doldur" href="#">YÖK Akademik</a>
+  <div class="page-head reveal">
+    <h1>Özgeçmiş<span class="dot">.</span></h1>
+    <p>Akademik unvanlar, eğitim, editörlük ve projeler.</p>
+    <div class="btns">
+      <a class="btn doldur" href="#">ORCID</a>
+      <a class="btn doldur" href="#">Google Scholar</a>
+      <a class="btn doldur" href="#">YÖK Akademik</a>
+    </div>
   </div>
 
-  <h2>Akademik unvanlar</h2>
-  <ul class="rows">
-    <li><div class="when"><span class="doldur">20XX –</span></div><div class="what"><strong>Doçent Doktor</strong><span>Sosyal Hizmet Bölümü, İstanbul Sabahattin Zaim Üniversitesi</span></div></li>
-    <li><div class="when"><span class="doldur">20XX – 20XX</span></div><div class="what"><strong>Doktor Öğretim Üyesi</strong><span>Sosyal Hizmet Bölümü, İstanbul Sabahattin Zaim Üniversitesi</span></div></li>
-  </ul>
+  <section>
+    <div class="sec-head"><h2>Akademik unvanlar</h2></div>
+    <ul class="rows">
+      <li><div class="when"><span class="doldur">20XX –</span></div><div class="what"><strong>Doçent Doktor</strong><span>Sosyal Hizmet Bölümü, İstanbul Sabahattin Zaim Üniversitesi</span></div></li>
+      <li><div class="when"><span class="doldur">20XX – 20XX</span></div><div class="what"><strong>Doktor Öğretim Üyesi</strong><span>Sosyal Hizmet Bölümü, İstanbul Sabahattin Zaim Üniversitesi</span></div></li>
+    </ul>
+  </section>
 
-  <h2>Eğitim</h2>
-  <ul class="rows">
-    <li><div class="when"><span class="doldur">20XX</span></div><div class="what"><strong>Doktora</strong><span class="doldur">Üniversite, program</span></div></li>
-    <li><div class="when"><span class="doldur">20XX</span></div><div class="what"><strong>Yüksek Lisans</strong><span class="doldur">Üniversite, program</span></div></li>
-    <li><div class="when"><span class="doldur">20XX</span></div><div class="what"><strong>Lisans</strong><span class="doldur">Üniversite, program</span></div></li>
-  </ul>
+  <section>
+    <div class="sec-head"><h2>Eğitim</h2></div>
+    <ul class="rows">
+      <li><div class="when"><span class="doldur">20XX</span></div><div class="what"><strong>Doktora</strong><span class="doldur">Üniversite, program</span></div></li>
+      <li><div class="when"><span class="doldur">20XX</span></div><div class="what"><strong>Yüksek Lisans</strong><span class="doldur">Üniversite, program</span></div></li>
+      <li><div class="when"><span class="doldur">20XX</span></div><div class="what"><strong>Lisans</strong><span class="doldur">Üniversite, program</span></div></li>
+    </ul>
+  </section>
 
-  <h2>Editörlük</h2>
-  <ul class="rows">
-    <li><div class="when"><span class="doldur">20XX –</span></div><div class="what"><strong>Baş Editör, <a href="https://dergipark.org.tr/tr/pub/scd">Sosyal Çalışma Dergisi</a></strong><span>Turkish Journal of Social Work</span></div></li>
-  </ul>
+  <section>
+    <div class="sec-head"><h2>Editörlük</h2></div>
+    <ul class="rows">
+      <li><div class="when"><span class="doldur">20XX –</span></div><div class="what"><strong>Baş Editör, <a href="https://dergipark.org.tr/tr/pub/scd">Sosyal Çalışma Dergisi</a></strong><span>Turkish Journal of Social Work</span></div></li>
+    </ul>
+  </section>
 
-  <h2>Girişim ve projeler</h2>
-  <ul class="rows">
-    <li><div class="when">Kurucu</div><div class="what"><strong>Mizout Bilişim ve Akademik Teknolojiler Ltd. Şti.</strong><span>Teknopark · <a href="https://mizout.com.tr">mizout.com.tr</a> · <a href="https://mjournals.org">mjournals.org</a></span></div></li>
-    <li><div class="when">Geliştirici</div><div class="what"><strong>ZAIM PRESS</strong><span>İstanbul Sabahattin Zaim Üniversitesi yayın altyapısı</span></div></li>
-    <li><div class="when">Danışman</div><div class="what"><strong>Kod tabanlı yayın sistemleri</strong><span>TR Dizin dergileri ve vakıf üniversiteleri için kurulum</span></div></li>
-  </ul>
+  <section>
+    <div class="sec-head"><h2>Girişim ve projeler</h2></div>
+    <ul class="rows">
+      <li><div class="when">Kurucu</div><div class="what"><strong>Mizout Bilişim ve Akademik Teknolojiler Ltd. Şti.</strong><span>Teknopark · <a href="https://mizout.com.tr">mizout.com.tr</a> · <a href="https://mjournals.org">mjournals.org</a></span></div></li>
+      <li><div class="when">Geliştirici</div><div class="what"><strong>ZAIM PRESS</strong><span>İstanbul Sabahattin Zaim Üniversitesi yayın altyapısı</span></div></li>
+      <li><div class="when">Kurulum</div><div class="what"><strong>Kod tabanlı yayın sistemleri</strong><span>TR Dizin dergileri ve vakıf üniversiteleri için</span></div></li>
+    </ul>
+  </section>
 
-  <h2>Yayınlar</h2>
-  <p>Güncel yayın listesi için <span class="doldur">Google Scholar / YÖK Akademik</span> profilime bakabilirsiniz.</p>
+  <section>
+    <div class="sec-head"><h2>Yayınlar</h2></div>
+    <p>Güncel yayın listesi için <span class="doldur">Google Scholar / YÖK Akademik</span> profilime bakabilirsiniz.</p>
+  </section>
 
-  <h2>Yetkinlikler</h2>
-  <ul class="tags">
-    <li>R</li><li>Jamovi</li><li>LaTeX</li><li>Python</li><li>Git / GitHub</li><li>Akademik dizgi</li>
-  </ul>
+  <section>
+    <div class="sec-head"><h2>Yetkinlikler</h2></div>
+    <ul class="tags">
+      <li>R</li><li>Jamovi</li><li>LaTeX</li><li>Python</li><li>Git / GitHub</li><li>Akademik dizgi</li>
+    </ul>
+  </section>
 </main>
-<footer>
-  <div class="wrap">© 2026 Kaan Sevim · <a href="mailto:kaan.sevim@izu.edu.tr">kaan.sevim@izu.edu.tr</a></div>
-</footer>
+<div class="band">
+  <div class="wrap">
+    <h2>Bir sorunuz ya da iş birliği fikriniz varsa yazın:<br>
+      <a class="mail" href="mailto:kaan.sevim@izu.edu.tr">kaan.sevim@izu.edu.tr</a></h2>
+    <div class="copy">© 2026 Kaan Sevim</div>
+  </div>
+</div>
+<script src="site.js"></script>
 </body>
 </html>

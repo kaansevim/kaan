@@ -3,68 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Kaan Sevim</title>
 </head>
 <body>
+<canvas class="bg-field" aria-hidden="true"></canvas>
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html">Kaan Sevim</a>
+    <a class="logo" href="index.html">Kaan<span class="dots"><i></i><i></i></span></a>
     <nav>
       <a href="index.html" class="active">Hakkımda</a>
       <a href="dersler.html">Dersler</a>
       <a href="cv.html">CV</a>
+      <button class="theme-btn" aria-label="Temayı değiştir">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
     </nav>
   </div>
 </header>
 <main class="wrap">
-  <div class="eyebrow">Sosyal Hizmet · Akademik Yayıncılık</div>
-  <h1>Doç. Dr. Kaan Sevim</h1>
-  <p class="lead">
-    İstanbul Sabahattin Zaim Üniversitesi Sosyal Hizmet Bölümü'nde öğretim üyesiyim.
-    Sosyal hizmet kuramları, istatistik ve kod tabanlı akademik yayıncılık üzerine çalışıyorum.
-  </p>
-  <div class="links">
-    <a class="btn primary" href="cv.html">CV'mi incele</a>
-    <a class="btn" href="dersler.html">Derslerim</a>
-    <a class="btn" href="mailto:kaan.sevim@izu.edu.tr">E-posta gönder</a>
+  <div class="hero">
+    <div class="reveal">
+      <div class="eyebrow">Doç. Dr.</div>
+      <h1>Kaan<br>Sevim<span class="dot">.</span></h1>
+    </div>
+    <!-- Fotoğraf: klasöre foto.jpg koyarsan burada görünür; yoksa baş harfler çıkar -->
+    <div class="photo reveal d1">
+      <span class="initials">KS</span>
+      <img src="foto.jpg" alt="Kaan Sevim" onerror="this.remove()">
+    </div>
   </div>
 
-  <h2>Hakkımda</h2>
-  <p>
-    On iki yıldır akademik dergi editörlüğü yapıyorum. Şu anda
-    <em>Sosyal Çalışma Dergisi</em>'nin (Turkish Journal of Social Work) baş editörüyüm.
-    Dergilerin uluslararası standartlarda dizgi ve yayın süreçlerini yönetebilmesi için
-    LaTeX, R ve Python ile kod tabanlı yayın sistemleri kuruyorum.
-  </p>
-  <p>
-    Mizout Bilişim ve Akademik Teknolojiler'in kurucusuyum. Üniversitemizde
-    ZAIM PRESS yayın altyapısını geliştiriyorum; TR Dizin dergileri ve vakıf
-    üniversiteleri için yayın sistemleri kurdum.
-  </p>
+  <div class="intro">
+    <p class="lead reveal d2">
+      İstanbul Sabahattin Zaim Üniversitesi Sosyal Hizmet Bölümü'nde öğretim üyesiyim.
+      Sosyal hizmet kuramları, istatistik ve kod tabanlı akademik yayıncılık üzerine çalışıyorum.
+    </p>
+    <div class="facts reveal d3">
+      <div class="fact"><small>Kurum</small><strong>Sosyal Hizmet Bölümü</strong><span>İstanbul Sabahattin Zaim Üniversitesi</span></div>
+      <div class="fact"><small>Dergi</small><strong>Sosyal Çalışma Dergisi</strong><span>Baş editör</span></div>
+      <div class="fact"><small>Girişim</small><strong>Mizout</strong><span>Kurucu · Akademik dergiler için dizgi platformu</span></div>
+    </div>
+  </div>
 
-  <h2>Çalışma alanları</h2>
-  <ul class="tags">
-    <li>Sosyal hizmet kuramları</li>
-    <li>İstatistik</li>
-    <li>Akademik yayıncılık</li>
-    <li>Dergi editörlüğü</li>
-    <li>LaTeX ve dizgi</li>
-    <li>R</li>
-  </ul>
+  <div class="links">
+    <a href="cv.html">CV</a>
+    <a href="dersler.html">Dersler</a>
+    <a href="https://github.com/kaansevim">GitHub</a>
+    <a href="https://mizout.com.tr">Mizout</a>
+    <a href="mailto:kaan.sevim@izu.edu.tr">E-posta</a>
+  </div>
 
-  <h2>Şu sıralar</h2>
-  <ul class="rows">
-    <li><div class="when">Editörlük</div><div class="what"><strong>Sosyal Çalışma Dergisi</strong><span>Baş editör</span></div></li>
-    <li><div class="when">Girişim</div><div class="what"><strong><a href="https://mizout.com.tr">Mizout</a></strong><span>Akademik dergiler için bulut tabanlı dizgi platformu</span></div></li>
-    <li><div class="when">Üniversite</div><div class="what"><strong>ZAIM PRESS</strong><span>Yayın altyapısı geliştirme</span></div></li>
-  </ul>
+  <section>
+    <div class="sec-head"><h2>Hakkımda</h2></div>
+    <p>
+      On iki yıldır akademik dergi editörlüğü yapıyorum. Şu anda <em>Sosyal Çalışma Dergisi</em>'nin
+      (Turkish Journal of Social Work) baş editörüyüm. Dergilerin uluslararası standartlarda dizgi ve
+      yayın süreçlerini yönetebilmesi için LaTeX, R ve Python ile kod tabanlı yayın sistemleri kuruyorum.
+    </p>
+    <p>
+      Mizout Bilişim ve Akademik Teknolojiler'in kurucusuyum. Üniversitemizde ZAIM PRESS yayın
+      altyapısını geliştiriyorum; TR Dizin dergileri ve vakıf üniversiteleri için yayın sistemleri kurdum.
+    </p>
+    <ul class="tags">
+      <li>Sosyal hizmet kuramları</li><li>İstatistik</li><li>Akademik yayıncılık</li>
+      <li>Dergi editörlüğü</li><li>LaTeX</li><li>R</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Şu sıralar</h2><a href="cv.html">Tüm CV</a></div>
+    <ul class="rows">
+      <li><div class="when">Editörlük</div><div class="what"><strong><a href="https://dergipark.org.tr/tr/pub/scd">Sosyal Çalışma Dergisi</a></strong><span>Baş editör</span></div></li>
+      <li><div class="when">Girişim</div><div class="what"><strong><a href="https://mizout.com.tr">Mizout</a></strong><span>Akademik dergiler için bulut tabanlı dizgi platformu</span></div></li>
+      <li><div class="when">Üniversite</div><div class="what"><strong>ZAIM PRESS</strong><span>Yayın altyapısı geliştirme</span></div></li>
+    </ul>
+  </section>
 </main>
-<footer>
-  <div class="wrap">© 2026 Kaan Sevim · <a href="mailto:kaan.sevim@izu.edu.tr">kaan.sevim@izu.edu.tr</a></div>
-</footer>
+<div class="band">
+  <div class="wrap">
+    <h2>Bir sorunuz ya da iş birliği fikriniz varsa yazın:<br>
+      <a class="mail" href="mailto:kaan.sevim@izu.edu.tr">kaan.sevim@izu.edu.tr</a></h2>
+    <div class="copy">© 2026 Kaan Sevim</div>
+  </div>
+</div>
+<script src="site.js"></script>
 </body>
 </html>
